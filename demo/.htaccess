@@ -1,0 +1,12 @@
+AddHandler php8.3-script .php
+DirectoryIndex index.php kbilling.php
+# 設定ファイルを直接読ませない（PHPが止まったときにソースが出るため）
+<FilesMatch "^(kbilling_config\.php)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

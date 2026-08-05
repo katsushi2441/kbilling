@@ -1,0 +1,18 @@
+public/kbilling_config.php
+# 請求書の台帳には請求先・メール・金額が入る。絶対にコミットしない。
+public/kbilling_data/*
+!public/kbilling_data/.htaccess
+outputs/
+*.pyc
+__pycache__/
+
+# ── ここから下は「有償パッケージにだけ同梱する」もの ──
+# GitHubからOSSとして取得する人にはコードだけを渡す。
+# 教材とVWorkは、ダウンロード販売の価格の根拠なので公開しない。
+# 削除はしない。ローカルには置いたまま、scripts/build_package.sh で束ねる。
+vwork/
+docs/
+AGENTS.md
+CLAUDE.md
+INSTALL.md
+SUPPORT.md
