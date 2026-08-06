@@ -114,13 +114,14 @@ function kbil_header($subtitle, $nav = '') {
     $logo = kbil_logo();
     ?>
 <header class="site"><div class="wrap">
-  <span class="brand">
+  <?php // 左上のタイトルは自分自身へのリンク。押せば初期表示に戻る ?>
+  <a class="brand" href="<?php echo kbil_h(basename($_SERVER['SCRIPT_NAME'])); ?>">
     <?php if ($logo !== ''): ?>
     <span class="ico"><img src="<?php echo kbil_h($logo); ?>" alt=""></span>
     <?php endif; ?>
     <span><strong><?php echo kbil_h(kbil_app_title()); ?></strong>
       <span><?php echo kbil_h($subtitle); ?></span></span>
-  </span>
+  </a>
   <?php if ($nav !== ''): ?><nav class="hnav"><?php echo $nav; ?></nav><?php endif; ?>
 </div></header>
 <?php
