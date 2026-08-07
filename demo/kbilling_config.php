@@ -22,3 +22,18 @@ define('KBIL_HOLDER', 'カ）デモシヨウジ');
 
 // デモのパスワードは商品ページに公開する（ログイン画面も商品の一部なので隠さない）
 define('KBIL_ADMIN_PASSWORD_HASH', '$2y$10$HKgG8xMF/pL3FhpcbE96cO7zmgtFPDVVcbOw9OJkW2s7RKFQiu2Ze');
+
+/* ------------------------------------------------------------------
+ * デモサイトのアクセス解析
+ *
+ * これは **デモ用の設定ファイル** にだけ書く。配布物の
+ * kbilling_config.php.example には値を入れない。
+ * 入れてしまうと、購入されたお客様のサイトの訪問者が当社の解析へ
+ * 送られてしまう。定数が未定義なら画面は何も出力しない。
+ * ---------------------------------------------------------------- */
+define('KBIL_HEAD_EXTRA', <<<'HTML'
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP0650KDFR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BP0650KDFR');</script>
+<script>(function(){var s=document.createElement('script');s.src='https://kurage.exbridge.jp/simpletrack.php?url='+encodeURIComponent(location.href)+'&ref='+encodeURIComponent(document.referrer);document.head.appendChild(s)})();</script>
+HTML
+);

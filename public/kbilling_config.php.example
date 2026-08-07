@@ -84,3 +84,12 @@ define('KBIL_MAIL_FROM', 'info@example.co.jp');
 // define('KBIL_AUTH', 'x');
 // define('KBIL_ADMIN', 'your_x_account');
  */
+
+/* ------------------------------------------------------------------
+ * アクセス解析などを <head> に足したいとき（任意）
+ *
+ * ここに書いたHTMLが、画面の </head> の直前にそのまま出ます。
+ * Google Analytics や自社の計測タグを入れる場所です。
+ * **既定では未定義**なので、何も設定しなければ何も出力しません。
+ * ---------------------------------------------------------------- */
+// define('KBIL_HEAD_EXTRA', '<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>');

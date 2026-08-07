@@ -103,6 +103,7 @@ table.items td.num,table.items th.num{text-align:right;white-space:nowrap}
 footer.site{text-align:center;color:var(--ink-soft);font-size:12.5px;
   padding:30px 20px 42px;border-top:1px solid var(--line);margin-top:18px}
 </style>
+<?php if (defined('KBIL_HEAD_EXTRA')) { echo KBIL_HEAD_EXTRA; } ?>
 </head>
 <body>
 <?php if (kbil_is_demo()): ?>
