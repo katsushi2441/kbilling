@@ -135,6 +135,7 @@ function kbil_footer() {
   <?php echo kbil_h($issuer['name']); ?>
   <?php if ($issuer['reg_no'] !== ''): ?>　登録番号 <?php echo kbil_h($issuer['reg_no']); ?><?php endif; ?>
 </div></footer>
+<?php if (($_SERVER['HTTP_HOST'] ?? '') === 'proto.exbridge.jp'): ?><p style="text-align:center;font-size:13px;margin:14px 0;color:#5d6b7a">これはデモです。<a href="https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6&amp;ref=kbilling" target="_blank" rel="noopener">この製品をオンプレミスで導入する（商品ページ）</a></p><?php endif; ?>
 </body>
 </html>
 <?php
